@@ -935,7 +935,7 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 4,
+        amountOfImages: 2,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
@@ -956,7 +956,7 @@
         >
             <img
                 class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/MXMQS4ZN73A79DQ00V7X5X5MS9AQ3CJ7WEYWTNX9.quicktime"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/cb8c5164-e3ea-4864-9d82-0a82bad9985f.png"
                 alt="painters near me company Perben Painting and Landscape, LLC in Bellingham, Washington"
             />
         </div>
@@ -973,41 +973,7 @@
         >
             <img
                 class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/cb8c5164-e3ea-4864-9d82-0a82bad9985f.png"
-                alt="painters near me company Perben Painting and Landscape, LLC in Bellingham, Washington"
-            />
-        </div>
-        
-        <div
-            class="absolute inset-0"
-            x-show="activeImage === 3"
-            x-transition:enter="transition duration-1000"
-            x-transition:enter-start="transform translate-x-full"
-            x-transition:enter-end="transform translate-x-0"
-            x-transition:leave="transition duration-1000"
-            x-transition:leave-start="transform"
-            x-transition:leave-end="transform -translate-x-full"
-        >
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
                 src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3a801703-7651-44f3-ab6a-b7f6973dfb3f.png"
-                alt="painters near me company Perben Painting and Landscape, LLC in Bellingham, Washington"
-            />
-        </div>
-        
-        <div
-            class="absolute inset-0"
-            x-show="activeImage === 4"
-            x-transition:enter="transition duration-1000"
-            x-transition:enter-start="transform translate-x-full"
-            x-transition:enter-end="transform translate-x-0"
-            x-transition:leave="transition duration-1000"
-            x-transition:leave-start="transform"
-            x-transition:leave-end="transform -translate-x-full"
-        >
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/42e8a2ce-1c98-446d-a7dc-790be26bd844.mp4"
                 alt="painters near me company Perben Painting and Landscape, LLC in Bellingham, Washington"
             />
         </div>
