@@ -247,7 +247,6 @@
                             sendButton.disabled = false
                             alert("There was a problem sending your text. Please reach out to ProPhone.")
                         })
-
                     }
                 
                     console.log('go bucks')
@@ -587,6 +586,14 @@
                                                     </a>
                                                  
                                                     <a
+                                                        href=" gallery-Gallery-652540042121339 "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">Gallery 652540042121339</p>
+                                                    </a>
+                                                 
+                                                    <a
                                                         href=" gallery-All "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -843,6 +850,10 @@
                                                     <p class="mt-1 text-sm text-gray-500">Gallery 6</p>
                                                 </a>
                                             
+                                                <a href="gallery-Gallery-652540042121339" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Gallery 652540042121339</p>
+                                                </a>
+                                            
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">All Photos</p>
                                                 </a>
@@ -1041,7 +1052,7 @@
             x-transition:leave-end="transform -translate-x-full"
         >
             
-                <video class="object-contain w-full lg:absolute h-80 lg:h-full" autoplay loop playsinline muted>
+                <video class="object-contain w-full lg:absolute h-80 lg:h-full" autoplay loop playsinline>
                     <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/IIB3D1LWJNTCJG06W2BH836WT4P4T3EG8TO2C5DN.quicktime" type = "" >
                 </video>
             
@@ -1058,7 +1069,7 @@
             x-transition:leave-end="transform -translate-x-full"
         >
             
-                <video class="object-contain w-full lg:absolute h-80 lg:h-full" autoplay loop playsinline muted>
+                <video class="object-contain w-full lg:absolute h-80 lg:h-full" autoplay loop playsinline>
                     <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/PZ5A1ZVS96527RSFJMUR4QFRACRMZAQMUACOEIPR.mp4" type = "" >
                 </video>
             
@@ -1735,7 +1746,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1750,6 +1761,23 @@
     }"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/d49d5546-4734-45fb-bd81-41b05845fb68.png" alt="Drywall and Plastering for Perben Painting and Landscape, LLC in Bellingham, Washington" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
         
     </ul>
 
@@ -1793,6 +1821,13 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d49d5546-4734-45fb-bd81-41b05845fb68.png" alt="Drywall and Plastering for Perben Painting and Landscape, LLC in Bellingham, Washington" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
                                 
                             </ul>
 
@@ -2809,7 +2844,7 @@ observer.observe(target)
               <p class="text-base text-gray-100">
                   Perben Painting and Landscape, LLC<br/>
                   
-                      1100 Congress Ave., Austin, TX 78701 <br/>
+                      Bellingham, Washington <br/>
                   
                   +1 360-544-2770
               </p>
@@ -2853,6 +2888,16 @@ observer.observe(target)
                                   >Home</a
                               >
                           </li>
+                          
+                              
+                              <li>
+                                  <a
+                                      href="#gallery"
+                                      class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                      >Gallery</a
+                                  >
+                              </li>
+                              
                           
                           
                           <li>
@@ -3439,8 +3484,7 @@ observer.observe(target)
 
 
 </body>
-</html>
-
+  
 <script>
     if (window.location.href.includes('prosite.prophone.com')) {
         document.body.className = "pt-56 md:pt-48"
@@ -3448,3 +3492,5 @@ observer.observe(target)
         document.body.className = "pt-24 md:pt-44"
     }
 </script>
+</html>
+
