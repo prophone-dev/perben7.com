@@ -554,46 +554,6 @@
                                                     </a>
                                                  
                                                     <a
-                                                        href=" gallery-Gallery-3 "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 3</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" gallery-Gallery-9277507816397984 "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 9277507816397984</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" gallery-Gallery-5 "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 5</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" gallery-Gallery-6 "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 6</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" gallery-Gallery-652540042121339 "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 652540042121339</p>
-                                                    </a>
-                                                 
-                                                    <a
                                                         href=" gallery-All "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -834,26 +794,6 @@
                                                     <p class="mt-1 text-sm text-gray-500">Interior Painting</p>
                                                 </a>
                                             
-                                                <a href="gallery-Gallery-3" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 3</p>
-                                                </a>
-                                            
-                                                <a href="gallery-Gallery-9277507816397984" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 9277507816397984</p>
-                                                </a>
-                                            
-                                                <a href="gallery-Gallery-5" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 5</p>
-                                                </a>
-                                            
-                                                <a href="gallery-Gallery-6" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 6</p>
-                                                </a>
-                                            
-                                                <a href="gallery-Gallery-652540042121339" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 652540042121339</p>
-                                                </a>
-                                            
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">All Photos</p>
                                                 </a>
@@ -1001,7 +941,7 @@
                     <div class="relative h-16 px-6 bg-white">
                         <h2 class="sr-only" :id="$id('modal-title')">Modal Gallery</h2>
 
-                        <button @click="galleryModalOpen = false;" class="absolute p-1 transition rounded top-5 right-1 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <button id="close-modal-button" @click="galleryModalOpen = false; handleClick()" class="absolute p-1 transition rounded top-5 right-1 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
                             <span class="sr-only">Close modal</span>
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -1040,19 +980,17 @@
     </template>
 </div>
 
+<script>
+    function handleClick() {
+        const videos = document.getElementsByClassName('gallery-modal-video')
+        for (let video of videos) {
+            video.muted = true
+        }
+    }
+</script>
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1246,7 +1184,7 @@
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Sun:  8:00am - 6:00pm 
+                                Sun:  Closed 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
