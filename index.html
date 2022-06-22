@@ -934,7 +934,7 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 5,
+        amountOfImages: 4,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
@@ -954,6 +954,23 @@
             x-transition:leave-end="transform -translate-x-full"
         >
             
+                <video id="hero-video" class="object-contain w-full lg:absolute h-80 lg:h-full" autoplay loop playsinline muted controls>
+                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9PEA5R3YTZGB5NGY7AIJFZ9PFH9Z8Z7QL9MXJZTY.mp4" type = "" >
+                </video>
+            
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 2"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            
                 <img
                     class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
                     src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5b3648f9-d94c-4c33-b1bf-def4b873f512.png"
@@ -964,7 +981,7 @@
         
         <div
             class="absolute inset-0"
-            x-show="activeImage === 2"
+            x-show="activeImage === 3"
             x-transition:enter="transition duration-1000"
             x-transition:enter-start="transform translate-x-full"
             x-transition:enter-end="transform translate-x-0"
@@ -983,41 +1000,7 @@
         
         <div
             class="absolute inset-0"
-            x-show="activeImage === 3"
-            x-transition:enter="transition duration-1000"
-            x-transition:enter-start="transform translate-x-full"
-            x-transition:enter-end="transform translate-x-0"
-            x-transition:leave="transition duration-1000"
-            x-transition:leave-start="transform"
-            x-transition:leave-end="transform -translate-x-full"
-        >
-            
-                <video id="hero-video" class="object-contain w-full lg:absolute h-80 lg:h-full" autoplay loop playsinline muted controls>
-                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/IIB3D1LWJNTCJG06W2BH836WT4P4T3EG8TO2C5DN.quicktime" type = "" >
-                </video>
-            
-        </div>
-        
-        <div
-            class="absolute inset-0"
             x-show="activeImage === 4"
-            x-transition:enter="transition duration-1000"
-            x-transition:enter-start="transform translate-x-full"
-            x-transition:enter-end="transform translate-x-0"
-            x-transition:leave="transition duration-1000"
-            x-transition:leave-start="transform"
-            x-transition:leave-end="transform -translate-x-full"
-        >
-            
-                <video id="hero-video" class="object-contain w-full lg:absolute h-80 lg:h-full" autoplay loop playsinline muted controls>
-                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/PZ5A1ZVS96527RSFJMUR4QFRACRMZAQMUACOEIPR.mp4" type = "" >
-                </video>
-            
-        </div>
-        
-        <div
-            class="absolute inset-0"
-            x-show="activeImage === 5"
             x-transition:enter="transition duration-1000"
             x-transition:enter-start="transform translate-x-full"
             x-transition:enter-end="transform translate-x-0"
