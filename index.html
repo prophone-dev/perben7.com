@@ -922,7 +922,7 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 1,
+        amountOfImages: 2,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
@@ -934,6 +934,25 @@
         <div
             class="absolute inset-0"
             x-show="activeImage === 1"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/XOWM8JYJN39X3P2X1XYU146UG0R6H8BMM1S7MUBJ.jpeg"
+                    alt="painters near me company PerbenPerbenPerben in Bellingham, Washington"
+                />
+            
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 2"
             x-transition:enter="transition duration-1000"
             x-transition:enter-start="transform translate-x-full"
             x-transition:enter-end="transform translate-x-0"
